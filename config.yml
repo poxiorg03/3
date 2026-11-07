@@ -1,0 +1,15 @@
+# Ceny przejścia na kolejny poziom, w dolarach EssentialsX
+ceny-ulepszen: [0, 5000, 15000, 30000, 50000, 100000, 200000, 300000]
+maksymalny-poziom: 8
+zablokowane-swiaty: []
+ustawienia-domyslne:
+  pvp: false
+  potwory: false
+  zwierzeta: true
+  wejscie: true
+  skrzynie: false
+  drzwi: false
+  eksplozje: false
+  ogien: false
+  latanie: false
+  noc: false

@@ -1,0 +1,31 @@
+
+name: Budowanie EasyMinePlots
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+
+      - name: Zainstaluj Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Zbuduj plugin
+        run: mvn -B clean package
+
+      - name: Zapisz gotowy JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: EasyMinePlots-JAR
+          path: target/easymineplots-*.jar
+          if-no-files-found: error
